@@ -68,6 +68,7 @@ app.delete("/webtoon/:id", (req, res) => {
 
 
 app.put("/webtoon/:id", (req, res) => {
+    const items = [];
     const itemId = parseInt(req.params.id, 10);
     const itemIndex = webtoon.findIndex((i) => i.id === itemId);
     if (itemIndex !== -1) {
